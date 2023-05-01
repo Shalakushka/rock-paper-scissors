@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    font-family: Kanit;
+}
+
+body {
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #222;
+    color: white;
+}
+
+header {
+    font-family: Kanit;
+    font-size: 60px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+footer {
+    font-family: Kanit;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+
+.player-selection {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-right: 4px #111 solid;
+}
+
+.computer-selection {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-left: 4px #111 solid;
+}
+
+.board {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 50px;
+    font-size: 32px;
+}
+
+.board img {
+    height:150px;
+    width: 150px;
+}
+
+.fight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rock, .paper, .scissors {
+    font-size: 150px;
+    background-color: rgb(77, 77, 77);
+    border-radius: 25px;
+    border: rgb(59, 59, 59) 4px solid;
+}
+
+.player-selection .rock:hover, .player-selection .paper:hover, .player-selection .scissors:hover {
+    box-shadow: 0px 0px 10px 2px rgba(214, 214, 214, 0.8);
+}
+
+.player-selection .rock:active, .player-selection .paper:active, .player-selection .scissors:active {
+    transform: translateY(4px);
+}
