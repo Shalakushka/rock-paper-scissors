@@ -23,20 +23,26 @@ function getResult(humanChoice, computerChoice) {
     if (humanChoice == "rock") {
         if (computerChoice == "paper") {
             computerScore += 1;
+            return -1;
         } else {
             humanScore += 1;
+            return -1;
         }
     } else if (humanChoice == "paper") {
         if (computerChoice == "scissors") {
             computerScore += 1;
+            return -1;
         } else {
             humanScore += 1;
+            return -1;
         }
     } else if (humanChoice == "scissors") {
         if (computerChoice == "rock") {
             computerScore += 1;
+            return -1;
         } else {
             humanScore += 1;
+            return -1;
         }
     }
 }
@@ -55,14 +61,13 @@ function resetGame() {
 function playRound(humanChoice) {
     let computerChoice = getComputerChoice();
     let result = getResult(humanChoice, computerChoice);
-
     if (round == 6)
         return;
     if (result == 1)
         statusDiv.textContent = `Your opponent picked ${computerChoice}! You won this round!`;
     else if (result == -1)
         statusDiv.textContent = `Your opponent picked ${computerChoice}! You lost this round!`;
-    else
+    else if (result == 0)
         statusDiv.textContent = `Your opponent picked ${computerChoice}! That's a tie...`;
     round += 1;
     if (round >= 6) {
